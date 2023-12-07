@@ -1,0 +1,14 @@
+Start:
+Command line input that states the json file and the claimed argument
+
+First turn:
+The player, opponent, gets given a list with all arguments that attack the claimed "in" argument.
+The player choses one, manual input. This one is put in the "out" list.
+
+Second turn:
+The computer needs to respond directly the the previous argument of the player. 
+It needs needs to find all arguments that attack it and that are also admissable.
+It choses one and put it into the "in" list.
+
+Third turn:
+The player gets a list of all arguments that attack the "in" arguments taht are not yet in the "out" list.
