@@ -42,12 +42,13 @@ class DiscussionGame:
     def opponent_move(self, argument):
         # Check if the argument is a valid move
         if argument not in self.framework.arguments:
-            return "invalid"  # Argument does not exist
+            return "invalid"  #Argument does not exist
 
         # Check if the argument attacks any of the proponent's arguments
         if not any(arg in self.proponent_arguments for arg in self.framework.attacks[argument]):
             return "invalid"  # Argument does not attack any of the proponent's arguments
 
+       
         # Add the argument to the set of opponent's arguments
         self.opponent_arguments.add(argument)
         self.current_argument = argument
@@ -75,12 +76,17 @@ def play_game(game):
         print(f"Round {game.round}: Proponent's argument: '{game.framework.arguments[proponent_move]}'")
 
         # Find arguments that attack the current argument
-        possible_moves = [attacker for attacker, attacked in game.framework.attack_relations if attacked == proponent_move]
+        possible_moves = [attacker for attacker, attacked in game.framework.attack_relations if attacked in game.proponent_arguments]
+
+        # arguments that have net yet been used
+        
+        valid_moves = [i for i in possible_moves if i not in game.opponent_arguments]
+
         print("Possible moves for you:")
-        for move in possible_moves:
+        for move in valid_moves:
             print(f"  {move}: {game.framework.arguments[move]}")
 
-        if not possible_moves:
+        if not valid_moves:
             print("Proponent wins! No more moves left for the opponent.")
             break
 
