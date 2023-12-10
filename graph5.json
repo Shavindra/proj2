@@ -1,0 +1,13 @@
+{
+    "Arguments" : {
+        "0": "The tongue is a muscle",
+        "1": "The tongue is an organ",
+        "2": "The tongue needs another muscle to move, thus it can move independently",
+        "3": "The main function of the tongue is to move"
+    },
+    
+    "Attack Relations" : [
+        ["1","0"], ["2","1"], ["2","2"], 
+        ["3","1"]
+    ]
+}
