@@ -73,13 +73,12 @@ def play_game(game):
             print("You win! The proponent cannot make a move.")
             break
 
-        print(f"Round {game.round}: Proponent's argument: '{game.framework.arguments[proponent_move]}'")
+        print(f"Round {game.round}: Proponent's argument: {proponent_move}: '{game.framework.arguments[proponent_move]}'")
 
         # Find arguments that attack the current argument
         possible_moves = [attacker for attacker, attacked in game.framework.attack_relations if attacked in game.proponent_arguments]
 
         # arguments that have net yet been used
-        
         valid_moves = [i for i in possible_moves if i not in game.opponent_arguments]
 
         print("Possible moves for you:")

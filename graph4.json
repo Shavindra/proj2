@@ -1,0 +1,16 @@
+{
+    "Arguments" : {
+        "0": "Statement 1 and 5 are false",
+        "1": "Statement 2 is false",
+        "2": "statement 3 is false",
+        "3": "statement 4 is false",
+        "4": "statement 4 and 5 are false",
+        "5": "statement 0 and 5 are false"
+    },
+    
+    "Attack Relations" : [
+        ["0","1"], ["0","5"], ["1","2"], 
+        ["2","3"], ["3","4"], ["4","4"],
+        ["4","5"], ["5","0"], ["5","5"]
+    ]
+}

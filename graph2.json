@@ -1,0 +1,14 @@
+{
+    "Arguments" : {
+        "0": "We have nothing to study",
+        "1": "We should study",
+        "2": "We should relax because it is the holiday",
+        "3": "We should do a fun activity because it is the holiday",
+        "4": "Being bored is fun and thus not boring"
+    },
+    
+    "Attack Relations" : [
+        ["0","1"], ["2","1"], ["2","3"], 
+        ["3","2"], ["3","4"], ["4","4"]
+    ]
+}

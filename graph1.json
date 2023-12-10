@@ -1,0 +1,15 @@
+{
+    "Arguments" : {
+        "0": "we should go biking, it is better for our knees",
+        "1": "We have to rent bikes and that takes money and time",
+        "2": "We are broke students",
+        "3": "We have no more assignments",
+        "4": "The exam is coming up soon",
+        "5": "We should go for a run"
+    },
+    
+    "Attack Relations" : [
+        ["0","5"], ["1","0"], ["2","1"], 
+        ["3","1"], ["4","3"]
+    ]
+}

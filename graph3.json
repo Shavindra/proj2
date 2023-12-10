@@ -1,0 +1,14 @@
+{
+    "Arguments" : {
+        "0": "Prometheus stole fire from the gods",
+        "1": "Geert the janitor stole fire from the gods",
+        "2": "Zeus cursed humanity to never have an afterlife, because prometheus stole his fire",
+        "3": "There is an afterlife",
+        "4": "Fire was stolen from the gods because we never had an afterlife to begin with"
+    },
+    
+    "Attack Relations" : [
+        ["0","1"], ["1","0"], ["1","2"], 
+        ["2","3"], ["3","4"], ["4","2"]
+    ]
+}
