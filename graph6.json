@@ -2,8 +2,8 @@
     "Arguments" : {
         "0": "Let's go running",
         "1": "cycling is better than running",
-        "2": "bouldering is better than cycling and running",
-        "3": "not excersizing is better than bouldering  and cycling"
+        "2": "bouldering is better than cycling or running",
+        "3": "not excersizing is better than bouldering or cycling"
     },
     
     "Attack Relations" : [

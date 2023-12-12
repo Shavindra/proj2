@@ -2,8 +2,8 @@
     "Arguments" : {
         "0": "The tongue is a muscle",
         "1": "The tongue is an organ",
-        "2": "The tongue needs another muscle to move, thus it can move independently",
-        "3": "The main function of the tongue is to move"
+        "2": "The tongue needs another muscle to move, thus it can move independently like a muscle",
+        "3": "The main function of the tongue is to move, so it is a muscle"
     },
     
     "Attack Relations" : [

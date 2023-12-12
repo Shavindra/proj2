@@ -26,7 +26,7 @@ class DiscussionGame:
             self_conflicting_moves = [move for move, attacked in self.framework.attack_relations if attacked == move]
             prefered_valid_moves = [move for move in valid_moves if ((move not in self_conflicting_moves)and(move not in non_admissable_moves))]
 
-            print(potential_moves,valid_moves,non_admissable_moves,self_conflicting_moves,prefered_valid_moves)
+            
             if prefered_valid_moves:
                 self.current_argument = prefered_valid_moves[0]
             elif valid_moves:
