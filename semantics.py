@@ -17,7 +17,6 @@ class SemanticsArgumentationFramework:
         for attack in self.attack_relations:
             if (attack[0] in args and attack[1] in args) or (attack[0] == attack[1] and attack[0] in args):
                 return False
-        print(f"Set {args} is conflict-free.")
         return True
         
     def characteristic_function(self, S):
@@ -33,7 +32,6 @@ class SemanticsArgumentationFramework:
                     break
             if not attacked:
                 result.add(a)
-        print(f"Characteristic function for set {S} is {result}.")
         return result
 
     def is_defended(self, argument, args):
@@ -62,7 +60,6 @@ class SemanticsArgumentationFramework:
                 subset_set = set(subset)
                 if self.is_conflict_free(subset_set) and all(self.is_defended(arg, subset_set) for arg in subset_set):
                     admissible.append(subset_set)
-        print(f"Admissible sets are {admissible}.")
         return admissible
 
     def complete_extensions(self):
@@ -77,7 +74,6 @@ class SemanticsArgumentationFramework:
             if admissible_set == defended_arguments:
                 complete.append(admissible_set)
 
-        print(f"Complete extensions are {complete}.")
         return complete
 
     def preferred_extensions(self):
@@ -89,7 +85,6 @@ class SemanticsArgumentationFramework:
         
         max_length = max(len(ext) for ext in complete_exts) if complete_exts else 0
         preferred_exts = [ext for ext in complete_exts if len(ext) == max_length]
-        print(f"Preferred extensions are {preferred_exts}.")
         return preferred_exts
 
     def credulous_acceptance(self, claimed_argument):
