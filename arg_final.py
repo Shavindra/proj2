@@ -58,7 +58,7 @@ class DiscussionGame:
 
 def play_game(game):
     print("Welcome to the Preferred Discussion Game!")
-    print("You are the opponent. Try to attack the argument presented by the proponent.\n")
+    print("You are the opponent. Choose an an option to attack the proponent.\n")
 
     while True:
         proponent_move = game.proponent_move()
@@ -70,12 +70,12 @@ def play_game(game):
 
         valid_moves = [attacker for attacker, attacked in game.framework.attack_relations if attacked == proponent_move and attacker not in game.opponent_arguments]
 
-        print("Possible moves for you:")
+        print("Available moves for you:")
         for move in valid_moves:
             print(f"  {move}: {game.framework.arguments[move]}")
 
         if not valid_moves:
-            print("Proponent wins! No more moves left for the opponent.")
+            print("Proponent wins! No more moves left for you.")
             break
 
         while True:

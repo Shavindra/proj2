@@ -2,7 +2,7 @@ import json
 import sys
 from itertools import combinations
 
-class ArgumentationFramework:
+class SemanticsArgumentationFramework:
     """
     Represents an argumentation framework with arguments and attack relations.
     """
@@ -133,7 +133,7 @@ if __name__ == "__main__":
             print(f"Invalid argument. Please enter a valid argument number from: {list(json_data['Arguments'].keys())}")
             sys.exit(1)
 
-        framework = ArgumentationFramework(json_data["Arguments"], json_data["Attack Relations"])
+        framework = SemanticsArgumentationFramework(json_data["Arguments"], json_data["Attack Relations"])
         play_game(framework, claimed_argument)
     except Exception as e:
         print(f"Error: {e}")
